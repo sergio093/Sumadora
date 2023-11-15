@@ -1,10 +1,10 @@
 package com.example.sumadora.utils
 
-import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -16,7 +16,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 //import androidx.compose.material3.LocalNavController
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -33,7 +32,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.sumadora.Model.OperacionRepository
 import com.example.sumadora.R
 import com.example.sumadora.ui.theme.SumadoraTheme
 import java.text.NumberFormat
@@ -61,7 +59,33 @@ fun Sumador() {
                 .padding(bottom = 16.dp)
                 .align(alignment = Alignment.Start)
         )
+        Row(modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 30.dp),
+            horizontalArrangement = Arrangement.Center
 
+        ){
+            Text(
+                textResource = Int,
+                fontSize = 50,
+                colorStyle = colorResource(R.color.black)
+            )
+        }
+
+        Spacer(modifier = Modifier.height(150.dp))
+
+        Row(modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 30.dp),
+            horizontalArrangement = Arrangement.Center
+
+        ){
+            Text(
+                textResource = Int,
+                fontSize = 50,
+                colorStyle = colorResource(R.color.black)
+            )
+        }
         EditNumber(
             label = R.string.numero1,
             keyboardOptions = KeyboardOptions.Default.copy(
@@ -103,13 +127,13 @@ fun EditNumber(
     value: String,
     modifier: Modifier = Modifier
 ) {
-    TextField(
+    /*TextField(
         value = value,
         singleLine = true,
         onValueChange = {},
         modifier = modifier,
         keyboardOptions = keyboardOptions
-    )
+    )*/
 }
 
 @Composable
@@ -133,7 +157,7 @@ fun CustomText(
 internal fun calculate(numero1: Int, numero2: Int): String {
     var operation = numero1 + numero2
     /*if (suma) {
-        operation = kotlin.math.ceil(operation.toDouble())
+        operation = kotlin.math.ceil(operation.toInt())
     }*/
     return NumberFormat.getCurrencyInstance().format(operation)
 }
