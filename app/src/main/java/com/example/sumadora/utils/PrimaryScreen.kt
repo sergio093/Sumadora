@@ -169,7 +169,6 @@ internal fun calculate(numero1: Int, numero2: Int): String {
 fun SumadoraPreview() {
     SumadoraTheme {
             Sumador()
-
         }
     }
 
