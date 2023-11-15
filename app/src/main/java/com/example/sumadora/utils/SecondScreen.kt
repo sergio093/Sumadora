@@ -25,11 +25,11 @@ fun ScreenResult() {
             .padding(top = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(
+        /*Text(
             text = R.string.operacion,
             fontSize = 50.sp,
             colorStyle = colorResource(R.color.black)
-        )
+        )*/
     }
 }
 
@@ -40,11 +40,11 @@ fun Text(
     fontSize: Int = 16,
     colorStyle: Color = colorResource(R.color.black)
 ) {
-    Text(
+    /*Text(
         text = textResource,
         fontSize = fontSize.sp,
         modifier = modifier
-    )
+    )*/
 }
 
 @Preview(showBackground = true)
