@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Sumadora</string>
+    <string name="sumador">Sumador</string>
+    <string name="numero1">1º número:</string>
+    <string name="numero2">2º número:</string>
+    <string name="resultado">Resulatdo:</string>
+    <string name="boton">+</string>
+    <string name="operacion" />
 </resources>
